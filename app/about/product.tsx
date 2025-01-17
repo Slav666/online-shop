@@ -1,5 +1,5 @@
 // import Image from "next/image";
-
+import Button from "../components/button";
 export interface Product {
   id: number;
   name: string;
@@ -25,9 +25,12 @@ export default function Product({ product }: ProductProps) {
         <p className="text-xl font-semibold text-[#2E8B57] mt-2">
           ${product.price}
         </p>
-        <button className="mt-4 px-6 py-2 bg-[#FF7F00] text-white rounded hover:bg-[#FF4500]">
-          Buy Now
-        </button>
+        <Button
+          label="Buy Now"
+          backgroundColor="#FF7F00"
+          textColor="white"
+          hoverColor="#FF4500"
+        />
       </div>
     </div>
   );
